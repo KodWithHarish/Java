@@ -1,0 +1,17 @@
+Problem Statement 1: Polygon Identifier
+
+Question Description: Create a program that identifies the type of a polygon based on the number of its sides. The program should accept an integer 'sides' as input.
+
+Boiler Plate Code:
+
+public class Main { public static void identifyPolygon(int sides) { // your code here } public static void main(String[] args) { identifyPolygon(4); } }
+
+Sample Input: 4
+
+Sample Output: Quadrilateral
+
+Full Code Solution:
+
+public class Main { public static void identifyPolygon(int sides) { switch(sides) { case 3: System.out.println("Triangle"); break; case 4: System.out.println("Quadrilateral"); break; case 5: System.out.println("Pentagon"); break; case 6: System.out.println("Hexagon"); break; // Add more cases as needed default: System.out.println("Polygon"); break; } } public static void main(String[] args) { identifyPolygon(4); } }
+
+In Detailed Explanation: The identifyPolygon function identifies the type of a polygon based on the number of its sides using a switch case.
