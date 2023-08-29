@@ -1,0 +1,42 @@
+class StringWordReverse {
+  public static void main(String [] args){
+    rev("Hello How Are You");
+    rev1("Hello How Are You");
+  }
+}
+
+public static void rev(String str) {
+		String arr[] = str.split(" ");
+		for (int i = 0; i < arr.length; i++) {
+			StringBuffer sb = new StringBuffer(arr[i]);
+			sb.reverse();
+			System.out.print(sb+" ");
+		}
+	}
+	
+	public static void rev1(String str) {
+		String wordArr[] = str.split(" ");
+//		String res = ""; 
+		StringBuffer res = new StringBuffer();
+		
+		for (int i = 0; i < wordArr.length; i++) {
+			String word = wordArr[i];
+			
+			char charArr[] = word.toCharArray();
+			char revArr[] = new char[charArr.length];
+			
+			int k = charArr.length-1;
+			for (int j = 0; j < charArr.length ; j++) {
+				revArr[j]=charArr[k];
+				k--;
+			}
+			String revStr = new String(revArr);
+//			res = res + revStr+" ";
+			res.append(revStr+" ");
+			res.toString();
+		}
+		System.out.println(res);
+		
+		
+		
+	}
